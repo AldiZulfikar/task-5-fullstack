@@ -132,10 +132,11 @@
 									>
 								</div>
 								<h4 class="mb-3">{{$data->title}}</h4>
+								{{ $data->category->name }}
 								<p>
 									{{Str::limit($data->content, 90)}}
 								</p>
-								<a class="text-uppercase" href="/baca-article/{{$data->slug}}"
+								<a class="text-uppercase" href="/baca-article/{{$data->id}}"
 									>Read More <i class="bi bi-arrow-right"></i
 								></a>
 							</div>

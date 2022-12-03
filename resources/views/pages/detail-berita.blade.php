@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<title>ABP Lawfirm</title>
+		<title>Fullstack</title>
 		<meta content="width=device-width, initial-scale=1.0" name="viewport" />
 		<meta content="Free HTML Templates" name="keywords" />
 		<meta content="Free HTML Templates" name="description" />
@@ -49,24 +49,6 @@
 		</div>
 		<!-- Spinner End -->
 
-		<!-- Topbar Start -->
-		<div class="container-fluid bg-dark px-5 d-none d-lg-block">
-			<div class="row gx-0">
-				<div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
-					<div class="d-inline-flex align-items-center" style="height: 45px;">
-						<small class="me-3 text-light"><i class="fa fa-phone-alt me-2"></i>(0254) 7926733</small>
-						<small class="text-light"><i class="fa fa-envelope-open me-2"></i>abplawfirm2020@gmail.com</small>
-					</div>
-				</div>
-				<div class="col-lg-4 text-center text-lg-end">
-					<div class="d-inline-flex align-items-center" style="height: 45px;">
-						<small class="me-3 text-light"><i class="fas fa-clock me-2"></i></i>Monday - Friday : 9.00 - 18.00</small>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- Topbar End -->
-
 		<!-- Navbar & Carousel Start -->
 		<div class="container-fluid position-relative p-0">
 			<nav class="navbar navbar-expand-lg navbar-dark px-5 py-3 py-lg-0">
@@ -98,10 +80,11 @@
                         <!-- Blog Detail Start -->
                         <div class="mb-5">
                             <img class="img-fluid w-100 rounded mb-5" src="{{$berita->gambar_berita ? asset('upload/' .$berita->gambar_berita) : asset('/img/berita.png')}}" alt="">
-                            <h1 class="mb-4">{{$berita->judul}}</h1>
-                            <p>{{$berita->konten}}</p>
-                            <small><i class="far fa-user"></i> {{ $berita->users->name }}</small> <br>
-                            <small> <i class="far fa-calendar-alt"></i> {{\Carbon\Carbon::parse($berita->created_at)->format('d F Y')}}</small>
+                            <h1 class="mb-4">{{$article->title}}</h1>
+                            <span>{{$article->category->name}}</span>
+                            <p>{{$article->content}}</p>
+                            <small><i class="far fa-user"></i> {{ $article->users->name }}</small> <br>
+                            <small> <i class="far fa-calendar-alt"></i> {{\Carbon\Carbon::parse($article->created_at)->format('d F Y')}}</small>
                         </div>
                         <!-- Blog Detail End -->
                     </div>
