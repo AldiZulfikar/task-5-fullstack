@@ -19,7 +19,6 @@
                     <tr>
                       <th class="text-center text-uppercase text-secondary text-xs font-weight-bolder opacity-7">No</th>
                       <th class="text-center text-uppercase text-secondary text-xs font-weight-bolder opacity-7">Name</th>
-                      <th class="text-center text-uppercase text-secondary text-xs font-weight-bolder opacity-7">Pembuat</th>
                       <th class="text-center text-uppercase text-secondary text-xs font-weight-bolder opacity-7">Aksi</th>
                     </tr>
                   </thead>
@@ -34,11 +33,6 @@
                       <td>
                         <div class="d-flex flex-column justify-content-center">
                           <h6 class="text-center mb-0 text-sm">{{ $data->name }}</h6>
-                        </div>
-                      </td>
-                      <td>
-                        <div class="d-flex flex-column justify-content-center">
-                          <h6 class="text-center mb-0 text-sm">{{ $data->users->name }}</h6>
                         </div>
                       </td>
                       <td class="align-middle text-center">

@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<title>ABP Lawfirm</title>
+		<title>Fullstack</title>
 		<meta content="width=device-width, initial-scale=1.0" name="viewport" />
 		<meta content="Free HTML Templates" name="keywords" />
 		<meta content="Free HTML Templates" name="description" />
@@ -66,8 +66,15 @@
 				</button>
 				<div class="collapse navbar-collapse" id="navbarCollapse">
 					<div class="navbar-nav ms-auto py-0">
+						@if (Route::has('login'))
+						@auth
 						<a href="" class="nav-item nav-link">Home</a>
-						<a href="#blog" class="nav-item nav-link">Blog</a>
+						<a href="{{ route('admin-dashboard') }}" class="nav-item nav-link">Admin</a>
+						@else
+						<a href="" class="nav-item nav-link">Home</a>
+						<a href="{{ route('login') }}" class="nav-item nav-link">Login</a>
+						@endauth
+						@endif
 					</div>
 				</div>
 			</nav>
@@ -132,13 +139,9 @@
 									>
 								</div>
 								<h4 class="mb-3">{{$data->title}}</h4>
-								{{ $data->category->name }}
 								<p>
 									{{Str::limit($data->content, 90)}}
 								</p>
-								<a class="text-uppercase" href="/baca-article/{{$data->id}}"
-									>Read More <i class="bi bi-arrow-right"></i
-								></a>
 							</div>
 						</div>
 					</div>

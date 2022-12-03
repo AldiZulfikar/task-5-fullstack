@@ -34,7 +34,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white {{ (request()->routeIs('category.index')) ? 'active bg-gradient-primary' : '' }}" href="{{route('category.index')}}">
+          <a class="nav-link text-white {{ (request()->routeIs('admin-category-admin')) ? 'active bg-gradient-primary' : '' }}" href="{{route('admin-category-admin')}}">
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
               <i class="fas fa-newspaper"></i>
             </div>
